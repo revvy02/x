@@ -17,20 +17,20 @@ local set = {
 	copy = require(script.copy),
 	count = require(script.count),
 	delete = require(script.delete),
-	difference = require(script.difference),
-	differenceSymmetric = require(script.differenceSymmetric),
+	diff = require(script.difference),
+	diff_symm = require(script.differenceSymmetric),
 	filter = require(script.filter),
-	fromArray = require(script.fromArray),
+	from_arr = require(script.fromArray),
 	has = require(script.has),
 	intersection = require(script.intersection),
-	isSubset = require(script.isSubset),
-	isSuperset = require(script.isSuperset),
+	is_subset = require(script.isSubset),
+	is_superset = require(script.isSuperset),
 	map = require(script.map),
 	merge = require(script.merge),
-	toArray = require(script.toArray),
+	to_arr = require(script.toArray),
 }
 
-set.fromList = set.fromArray
+set.from_list = set.from_arr
 set.join = set.merge
 set.subtract = set.delete
 set.union = set.merge

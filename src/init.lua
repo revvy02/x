@@ -19,19 +19,19 @@ local Types = require(script.Types)
 
 	The Luau types `Dictionary<K, V>`, `Array<T>` (aliased as `List<T>`) and `Set<T>` are exported from the Sift module (e.g. they can be used via `Sift.Array<string>`), but are also available from [Sift.Types].
 ]=]
-local Sift = {
-	Array = require(script.Array),
-	Dictionary = require(script.Dictionary),
-	Set = require(script.Set),
+local x = {
+	arr = require(script.Array),
+	dict = require(script.Dictionary),
+	set = require(script.Set),
 
-	None = require(script.None),
-	Types = require(script.Types),
+	none = require(script.None),
+	types = require(script.Types),
 
-	equalObjects = require(script.Util.equalObjects),
-	isEmpty = require(script.Util.isEmpty),
+	eq_objects = require(script.Util.equalObjects),
+	is_empty = require(script.Util.isEmpty),
 }
 
-Sift.List = Sift.Array
+x.list = x.arr
 
 --- @prop Array Array
 --- @within Sift
@@ -55,4 +55,4 @@ export type Array<T> = Types.Array<T>
 export type List<T> = Array<T>
 export type Set<T> = Types.Set<T>
 
-return Sift
+return x
